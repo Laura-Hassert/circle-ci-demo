@@ -2,19 +2,19 @@ version: 2.1
 orbs:
   node: circleci/node@1.1
 jobs:
-  build: 
+  build:
     executor:
       name: node/default
       tag: '10.4'
-    steps: 
+    steps:
       - checkout
       - node/with-cache:
-      steps: 
-        - run: npm install
+          steps:
+          - run: npm install
       - run: npm run test
 
 
-#THE HELLO WORLD EXAMPLE PROVIDED BY CIRCLECI
+# THE HELLO WORLD EXAMPLE PROVIDED BY CIRCLECI
 # # Use the latest 2.1 version of CircleCI pipeline process engine.
 # # See: https://circleci.com/docs/2.0/configuration-reference
 # version: 2.1
